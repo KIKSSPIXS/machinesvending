@@ -1,0 +1,114 @@
+/* Definindo a fonte padrão e o fundo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Estilizando o cabeçalho */
+.header {
+    background-color: #003366;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-icons img {
+    width: 100%;
+    height: auto;
+    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Estilizando o conteúdo principal */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.item-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.machine-image {
+    flex: 1;
+}
+
+.machine-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 4px solid #003366;
+}
+
+.item-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.item-info h3 {
+    margin-top: 0;
+    color: #003366;
+}
+
+.item-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.item-info .value, 
+.item-info .return, 
+.item-info .time, 
+.item-info .buy {
+    font-weight: bold;
+    color: #003366;
+}
+
+button {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Estilizando a mensagem de erro */
+.message {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
+}

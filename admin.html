@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="royal.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Painel de Administração</h1>
+        <form action="admin.php" method="POST">
+            <label for="search-id">Pesquisar por ID:</label>
+            <input type="text" id="search-id" name="search-id" required>
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
+
+    <div class="content">
+        <h2>Usuários Registrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>ID</th>
+                    <th>Saldo</th>
+                    <th>Senha</th>
+                    <th>Afiliado por</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($users as $line) {
+                    list($username, $password, $balance, $id, $affiliateCode) = explode(':', $line);
+                    echo "<tr>
+                            <td>$username</td>
+                            <td>$id</td>
+                            <td>$balance</td>
+                            <td>$password</td>
+                            <td>$affiliateCode</td>
+                          </tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="content">
+        <h2>Alterar Saldo</h2>
+        <form action="admin.php" method="POST">
+            <label for="user-id">ID do Usuário:</label>
+            <input type="text" id="user-id" name="user-id" required>
+            
+            <label for="new-balance">Novo Saldo:</label>
+            <input type="number" id="new-balance" name="new-balance" required>
+            
+            <button type="submit" name="update
